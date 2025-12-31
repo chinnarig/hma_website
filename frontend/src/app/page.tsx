@@ -1,0 +1,70 @@
+import { Metadata } from 'next'
+import Navbar from '@/components/Navbar'
+import Hero from '@/components/Hero'
+import Stats from '@/components/Stats'
+import Features from '@/components/Features'
+import ProductFeatures from '@/components/ProductFeatures'
+import Demos from '@/components/Demos'
+import Solutions from '@/components/Solutions'
+import Integrations from '@/components/Integrations'
+import CTA from '@/components/CTA'
+import Footer from '@/components/Footer'
+
+export const metadata: Metadata = {
+  title: 'Hey Mello - AI Voice Agents',
+  description: 'Deploy intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7. 1M+ calls processed, 10K+ active users.',
+  openGraph: {
+    title: 'AI Voice Agents That Understand Your Customers | Hey Mello',
+    description: 'Deploy intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7.',
+    url: 'https://heymello.ai',
+    type: 'website',
+  },
+}
+
+export default function Home() {
+  // Structured Data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Hey Mello",
+    "applicationCategory": "BusinessApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1000"
+    },
+    "description": "Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support"
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="min-h-screen">
+        <Navbar />
+        <Hero />
+        <Stats />
+        <div id="features">
+          <Features />
+        </div>
+        <ProductFeatures />
+        <Demos />
+        <div id="solutions">
+          <Solutions />
+        </div>
+        <div id="integrations">
+          <Integrations />
+        </div>
+        <CTA />
+        <Footer />
+      </div>
+    </>
+  )
+}
