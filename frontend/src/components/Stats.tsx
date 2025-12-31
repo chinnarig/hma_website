@@ -7,7 +7,7 @@ const Stats = () => {
   const { stats } = mockData;
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-16 bg-gray-900 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -15,10 +15,10 @@ const Stats = () => {
               key={index} 
               className="text-center group hover:scale-105 transition-transform duration-300"
             >
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm md:text-base text-gray-600">
+              <div className="text-sm md:text-base text-gray-400">
                 {stat.label}
               </div>
             </div>

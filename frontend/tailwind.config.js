@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['var(--font-space-grotesk)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -46,6 +49,19 @@ module.exports = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
+  			brand: {
+  				DEFAULT: '#8c52ff',
+  				50: '#f5f0ff',
+  				100: '#ede0ff',
+  				200: '#dcc7ff',
+  				300: '#c4a2ff',
+  				400: '#a870ff',
+  				500: '#8c52ff',
+  				600: '#7c3aed',
+  				700: '#6d28d9',
+  				800: '#5b21b6',
+  				900: '#8c52ff',
+  			},
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',

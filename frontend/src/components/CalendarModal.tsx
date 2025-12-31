@@ -23,7 +23,7 @@ export default function CalendarModal({ isOpen, onClose }: CalendarModalProps) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="flex items-center justify-between p-4 border-b bg-brand">
           <h3 className="text-xl font-semibold text-white flex items-center">
             <CalendarCheck className="w-6 h-6 mr-2" />
             Schedule Your Demo
@@ -43,26 +43,24 @@ export default function CalendarModal({ isOpen, onClose }: CalendarModalProps) {
         <div className="flex-1 overflow-hidden relative">
           {/* Loading Spinner */}
           {isLoading && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50">
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50">
               <div className="relative">
                 {/* Spinning Circle */}
-                <div className="w-20 h-20 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin"></div>
+                <div className="w-20 h-20 border-4 border-gray-200 border-t-brand rounded-full animate-spin"></div>
                 {/* Stylized Z Letter in Center with Effects */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative">
-                    <span className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent animate-pulse">
+                    <span className="text-4xl font-bold text-brand animate-pulse">
                       Z
                     </span>
-                    {/* Glow effect */}
-                    <div className="absolute inset-0 blur-md bg-gradient-to-r from-purple-400 to-blue-400 opacity-50 animate-pulse"></div>
                   </div>
                 </div>
               </div>
               <p className="mt-6 text-gray-600 font-medium">Loading calendar...</p>
               <div className="mt-2 flex space-x-1">
-                <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce"></div>
-                <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                <div className="w-2 h-2 bg-brand rounded-full animate-bounce"></div>
+                <div className="w-2 h-2 bg-brand rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                <div className="w-2 h-2 bg-brand rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
               </div>
             </div>
           )}

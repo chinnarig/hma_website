@@ -17,9 +17,8 @@ const FAQs = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Frequently Asked 
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Questions</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Everything you need to know about HeyMello AI voice agents
@@ -36,7 +35,7 @@ const FAQs = () => {
               >
                 <span className="text-lg font-semibold pr-8">{faq.question}</span>
                 <ChevronDown 
-                  className={`w-5 h-5 text-purple-600 flex-shrink-0 transition-transform duration-200 ${
+                  className={`w-5 h-5 text-gray-600 flex-shrink-0 transition-transform duration-200 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />

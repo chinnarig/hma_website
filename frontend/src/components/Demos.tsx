@@ -89,13 +89,13 @@ const Demos: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            See <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Hey Mello</span> in Action
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 tracking-tight leading-tight">
+            See Hey Mello in Action
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Watch real-world demonstrations of our AI voice agents across different industries
           </p>
         </div>
@@ -104,14 +104,14 @@ const Demos: React.FC = () => {
           {demos.map((demo, index) => (
             <div
               key={index}
-              className="group relative bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-2xl hover:border-purple-300 transition-all duration-300 hover:-translate-y-2"
+              className="group relative bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-2xl hover:border-gray-300 transition-all duration-300 hover:-translate-y-2"
             >
               {/* Video placeholder with play button and wave animation */}
-              <div className="relative aspect-video bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl mb-6 overflow-hidden">
+              <div className="relative aspect-video bg-gray-100 rounded-xl mb-6 overflow-hidden">
                 <div className="absolute inset-0 z-10 flex items-center justify-center">
                   <button
                     onClick={() => handlePlayPause(index)}
-                    className="relative z-10 rounded-full w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center group-hover:scale-110 transition-all shadow-xl"
+                    className="relative z-10 rounded-full w-16 h-16 bg-brand flex items-center justify-center group-hover:scale-110 transition-all shadow-xl"
                   >
                     {playingIndex === index ? (
                       <div className="flex items-end gap-1 h-6">
@@ -125,12 +125,10 @@ const Demos: React.FC = () => {
                     )}
                   </button>
                 </div>
-                {/* Decorative gradient overlay */}
-                <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-br from-purple-600/10 to-transparent"></div>
               </div>
 
               <div className="space-y-3">
-                <div className="text-sm font-semibold text-purple-600 uppercase tracking-wide">
+                <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
                   {demo.category}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">{demo.title}</h3>

@@ -105,7 +105,7 @@ export default function RequestDemo() {
       <Navbar />
       <main className="pt-24 pb-16">
         {/* Hero Section */}
-        <section className="py-8 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+        <section className="py-8 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
@@ -124,24 +124,24 @@ export default function RequestDemo() {
             <div className="max-w-3xl mx-auto">
               {/* Benefits */}
               <div className="grid md:grid-cols-3 gap-6 mb-12">
-                <div className="text-center p-6 bg-purple-50 rounded-xl">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="text-center p-6 bg-gray-50 rounded-xl">
+                  <div className="w-12 h-12 bg-brand rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Calendar className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold mb-2">Live Demo</h3>
                   <p className="text-sm text-gray-600">See our AI agents in real-time action</p>
                 </div>
                 
-                <div className="text-center p-6 bg-blue-50 rounded-xl">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="text-center p-6 bg-gray-50 rounded-xl">
+                  <div className="w-12 h-12 bg-brand rounded-lg flex items-center justify-center mx-auto mb-4">
                     <User className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold mb-2">Personalized</h3>
                   <p className="text-sm text-gray-600">Tailored to your industry needs</p>
                 </div>
                 
-                <div className="text-center p-6 bg-pink-50 rounded-xl">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="text-center p-6 bg-gray-50 rounded-xl">
+                  <div className="w-12 h-12 bg-brand rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold mb-2">30 Minutes</h3>
@@ -150,12 +150,9 @@ export default function RequestDemo() {
               </div>
 
               {/* Form */}
-              <div className="bg-white rounded-3xl shadow-2xl border border-purple-100 p-8 md:p-12 relative overflow-hidden">
-                {/* Background gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 via-transparent to-blue-50/30 pointer-events-none"></div>
-                
+              <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 md:p-12 relative overflow-hidden">
                 <div className="relative">
-                  <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Request a Demo</h2>
+                  <h2 className="text-3xl font-bold mb-2 text-gray-900">Request a Demo</h2>
                   <p className="text-gray-600 mb-8">Fill out the form below and we'll schedule a personalized demo session</p>
                   
                   <form onSubmit={handleSubmit} className="space-y-8">
@@ -164,7 +161,7 @@ export default function RequestDemo() {
                       <div className="group">
                         <label htmlFor="firstName" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
                           First Name 
-                          <span className="ml-1 text-purple-600 font-bold">*</span>
+                          <span className="ml-1 text-brand font-bold">*</span>
                         </label>
                         <Input
                           id="firstName"
@@ -173,14 +170,14 @@ export default function RequestDemo() {
                           required
                           value={formData.firstName}
                           onChange={handleChange}
-                          className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                          className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
                           placeholder=""
                         />
                       </div>
                       <div className="group">
                         <label htmlFor="lastName" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
                           Last Name 
-                          <span className="ml-1 text-purple-600 font-bold">*</span>
+                          <span className="ml-1 text-brand font-bold">*</span>
                         </label>
                         <Input
                           id="lastName"
@@ -189,7 +186,7 @@ export default function RequestDemo() {
                           required
                           value={formData.lastName}
                           onChange={handleChange}
-                          className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                          className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
                           placeholder=""
                         />
                       </div>
@@ -210,7 +207,7 @@ export default function RequestDemo() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full h-12 pl-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                          className="w-full h-12 pl-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
                           placeholder=""
                         />
                       </div>
@@ -231,7 +228,7 @@ export default function RequestDemo() {
                           required
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full h-12 pl-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                          className="w-full h-12 pl-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
                           placeholder=""
                         />
                       </div>
@@ -252,7 +249,7 @@ export default function RequestDemo() {
                           required
                           value={formData.company}
                           onChange={handleChange}
-                          className="w-full h-12 pl-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                          className="w-full h-12 pl-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
                           placeholder=""
                         />
                       </div>
@@ -277,7 +274,7 @@ export default function RequestDemo() {
                     {/* Calendar Booking */}
                     <div className="group">
                       <label className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
-                        <CalendarCheck className="w-5 h-5 mr-2 text-purple-600" />
+                        <CalendarCheck className="w-5 h-5 mr-2 text-brand" />
                         Schedule Your Demo
                         <span className="ml-1 text-purple-600 font-bold">*</span>
                       </label>
@@ -286,10 +283,10 @@ export default function RequestDemo() {
                         <button
                           type="button"
                           onClick={openCalendar}
-                          className="w-full p-6 border-2 border-dashed border-purple-300 rounded-xl bg-gradient-to-br from-purple-50 to-blue-50 hover:from-purple-100 hover:to-blue-100 transition-all duration-300 group/cal"
+                          className="w-full p-6 border-2 border-dashed border-gray-300 rounded-xl bg-gray-50 hover:bg-gray-100 transition-all duration-300 group/cal"
                         >
                           <div className="flex flex-col items-center space-y-3">
-                            <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center group-hover/cal:scale-110 transition-transform duration-300">
+                            <div className="w-16 h-16 bg-brand rounded-2xl flex items-center justify-center group-hover/cal:scale-110 transition-transform duration-300">
                               <CalendarCheck className="w-8 h-8 text-white" />
                             </div>
                             <div>
@@ -300,7 +297,7 @@ export default function RequestDemo() {
                                 Choose your preferred demo slot
                               </p>
                             </div>
-                            <div className="flex items-center space-x-2 text-purple-600 font-medium">
+                            <div className="flex items-center space-x-2 text-brand font-medium">
                               <Clock className="w-4 h-4" />
                               <span className="text-sm">30 minute session</span>
                             </div>
@@ -325,7 +322,7 @@ export default function RequestDemo() {
                                   setCalendarBooked(false);
                                   openCalendar();
                                 }}
-                                className="text-sm text-purple-600 hover:text-purple-700 font-medium underline flex items-center space-x-1"
+                                className="text-sm text-brand hover:text-brand-600 font-medium underline flex items-center space-x-1"
                               >
                                 <Calendar className="w-4 h-4" />
                                 <span>Change appointment</span>
@@ -353,7 +350,7 @@ export default function RequestDemo() {
                         rows={5}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300 resize-none"
+                        className="w-full border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300 resize-none"
                         placeholder="Tell us about your specific use case or industry..."
                       />
                     </div>
@@ -379,7 +376,7 @@ export default function RequestDemo() {
                       <Button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full h-14 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full h-14 bg-brand hover:bg-brand-600 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isSubmitting ? 'Submitting...' : 'Complete Demo Request'}
                         {!isSubmitting && <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />}
@@ -405,8 +402,8 @@ export default function RequestDemo() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white rounded-xl shadow-sm p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-purple-600 font-bold">1</span>
+                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-gray-700 font-bold">1</span>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Live Agent Demonstration</h3>
@@ -447,8 +444,8 @@ export default function RequestDemo() {
 
                 <div className="bg-white rounded-xl shadow-sm p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-purple-600 font-bold">4</span>
+                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-gray-700 font-bold">4</span>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Q&A Session</h3>
@@ -476,7 +473,7 @@ export default function RequestDemo() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-purple-600 to-blue-600">
+            <div className="flex items-center justify-between p-4 border-b bg-brand">
               <h3 className="text-xl font-semibold text-white flex items-center">
                 <CalendarCheck className="w-6 h-6 mr-2" />
                 Schedule Your Demo

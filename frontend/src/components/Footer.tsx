@@ -20,8 +20,8 @@ const Footer = () => {
                 height={40}
                 className="w-10 h-10"
               />
-              <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Hey Mello
+              <div className="text-2xl font-bold text-white tracking-tight">
+                <span className="font-extrabold">Hey Mello</span>
               </div>
             </div>
             <p className="text-sm text-gray-400 mb-4">
@@ -31,7 +31,7 @@ const Footer = () => {
                 {/* <a href="#" className="hover:text-purple-400 transition-colors">
                   <Twitter className="w-5 h-5" />
                 </a> */}
-                <a href="https://www.linkedin.com/company/heymello-ai/about/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">
+                <a href="https://www.linkedin.com/company/heymello-ai/about/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
                 {/* <a href="#" className="hover:text-purple-400 transition-colors">
@@ -47,10 +47,10 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Product</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/#features" className="hover:text-purple-400 transition-colors">Features</Link></li>
-              <li><Link href="/solutions" className="hover:text-purple-400 transition-colors">Solutions</Link></li>
-              <li><Link href="/integrations" className="hover:text-purple-400 transition-colors">Integrations</Link></li>
-              <li><Link href="/pricing" className="hover:text-purple-400 transition-colors">Pricing</Link></li>
+              <li><Link href="/#features" className="hover:text-white transition-colors">Features</Link></li>
+              <li><Link href="/solutions" className="hover:text-white transition-colors">Solutions</Link></li>
+              <li><Link href="/integrations" className="hover:text-white transition-colors">Integrations</Link></li>
+              <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
               {/* <li><a href="#" className="hover:text-purple-400 transition-colors">API</a></li> */}
             </ul>
           </div>
@@ -59,12 +59,12 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="hover:text-purple-400 transition-colors">About Us</Link></li>
-              {/* <li><a href="#" className="hover:text-purple-400 transition-colors">Careers</a></li> */}
-              {/* <li><a href="#" className="hover:text-purple-400 transition-colors">Blog</a></li> */}
-              {/* <li><a href="#" className="hover:text-purple-400 transition-colors">Press</a></li> */}
-              <li><Link href="/contact-sales" className="hover:text-purple-400 transition-colors">Contact</Link></li>
-              <li><Link href="/help-center" className="hover:text-purple-400 transition-colors">Help Center</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              {/* <li><a href="#" className="hover:text-white transition-colors">Careers</a></li> */}
+              {/* <li><a href="#" className="hover:text-white transition-colors">Blog</a></li> */}
+              {/* <li><a href="#" className="hover:text-white transition-colors">Press</a></li> */}
+              <li><Link href="/contact-sales" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/help-center" className="hover:text-white transition-colors">Help Center</Link></li>
             </ul>
           </div>
 
@@ -72,9 +72,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
-               <li><Link href="/privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</Link></li>
-               <li><Link href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</Link></li>
-               <li><Link href="/cookies" className="hover:text-purple-400 transition-colors">Cookie Policy</Link></li>
+               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+               <li><Link href="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link></li>
               {/* <li><a href="#" className="hover:text-purple-400 transition-colors">Documentation</a></li>
               <li><a href="#" className="hover:text-purple-400 transition-colors">Help Center</a></li>
               <li><a href="#" className="hover:text-purple-400 transition-colors">Community</a></li>

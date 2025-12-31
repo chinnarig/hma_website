@@ -11,18 +11,12 @@ const CTA = () => {
 
   return (
     <>
-      <section className="py-12 bg-gradient-to-br from-purple-600 via-purple-700 to-blue-700 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-blob"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-2000"></div>
-        </div>
-
+      <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight leading-tight">
             Ready to Transform Your Customer Experience?
           </h2>
-          <p className="text-base text-purple-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
             Join thousands of businesses using AI voice agents to scale their operations.
           </p>
 
@@ -30,7 +24,7 @@ const CTA = () => {
             <Button 
               size="lg" 
               onClick={() => setShowCalendar(true)}
-              className="bg-white text-purple-600 hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 group"
+              className="bg-brand hover:bg-brand-600 text-white shadow-xl hover:shadow-2xl transition-all duration-300 group"
             >
               Request a Demo
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -39,7 +33,7 @@ const CTA = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="bg-transparent border-2 border-gray-700 text-white hover:bg-gray-800 hover:border-gray-600 shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 Contact Sales
               </Button>

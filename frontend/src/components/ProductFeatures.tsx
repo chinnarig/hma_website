@@ -33,16 +33,16 @@ const ProductFeatures: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-purple-600 uppercase tracking-wide mb-4 block">
+          <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4 block">
             PRODUCT
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 tracking-tight leading-tight">
             Complete AI Voice OS for Enterprise Teams
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             One platform to automate, manage, and scale every phone conversation from routing to resolution.
           </p>
         </div>
@@ -51,13 +51,13 @@ const ProductFeatures: React.FC = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-2"
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:-translate-y-2"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 shadow-lg flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-xl bg-brand shadow-lg flex items-center justify-center mb-6">
                 <feature.icon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">{feature.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-base">{feature.description}</p>
             </div>
           ))}
         </div>

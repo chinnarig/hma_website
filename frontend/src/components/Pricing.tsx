@@ -14,11 +14,10 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Simple, Transparent 
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Pricing</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 tracking-tight leading-tight">
+            Simple, Transparent Pricing
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Choose the perfect plan for your business needs. No hidden fees, cancel anytime.
           </p>
         </div>
@@ -30,13 +29,13 @@ const Pricing = () => {
               key={index}
               className={`relative rounded-lg border bg-white hover:shadow-2xl transition-all duration-300 ${
                 plan.popular 
-                  ? 'border-2 border-purple-500 shadow-xl scale-105' 
+                  ? 'border-2 border-brand shadow-xl scale-105' 
                   : 'border-gray-200 hover:scale-105'
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-brand text-white px-4 py-1 rounded-full text-sm font-medium">
                     Most Popular
                   </span>
                 </div>
@@ -62,7 +61,7 @@ const Pricing = () => {
                 <ul className="space-y-3">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
-                      <Check className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-brand mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -75,8 +74,8 @@ const Pricing = () => {
                   <Button 
                     className={`w-full ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white'
-                        : 'border-2 border-gray-300 hover:border-purple-600 hover:text-purple-600 bg-white text-gray-700'
+                        ? 'bg-brand hover:bg-brand-600 text-white'
+                        : 'border-2 border-gray-300 hover:border-brand hover:text-brand bg-white text-gray-700'
                     }`}
                     size="lg"
                   >
