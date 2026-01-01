@@ -39,7 +39,7 @@ const ProductFeatures: React.FC = () => {
           <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 block">
             PRODUCT
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-3 text-gray-900 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium mb-3 text-gray-900 tracking-tight leading-tight">
             Complete AI Voice OS for Enterprise Teams
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">

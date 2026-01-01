@@ -289,7 +289,7 @@ Mello AI Ltd
 Email: admin@heymello.ai
 Website: heymello.ai
 <!-- TODO: Replace admin@heymello.ai with support@heymello.ai when support email is ready -->
-Support: admin@heymello.ai
+<!-- Support: admin@heymello.ai -->
 
 ## 17. Acknowledgment
 

@@ -4,7 +4,7 @@ export const mockData: MockData = {
   hero: {
     badge: "Our Integrated AI Solutions",
     title: "AI Voice Agents That Understand Your Customers",
-    subtitle: "Deploy intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7.",
+    subtitle: "Deploy intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7. ",
     ctaPrimary: "Contact Sales",
     ctaSecondary: "Request a Demo",
     disclaimer: "No credit card required"

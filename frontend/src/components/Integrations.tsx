@@ -49,7 +49,7 @@ const Integrations = () => {
             </p>
             <Link 
               href="/contact-sales" 
-              className="inline-flex items-center px-6 py-3 bg-brand text-white font-semibold rounded-xl hover:bg-brand-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-6 py-3 bg-brand text-white font-semibold rounded-full hover:bg-brand-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Contact Our Team
             </Link>

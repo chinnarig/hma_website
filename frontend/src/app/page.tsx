@@ -4,6 +4,7 @@ import Hero from '@/components/Hero'
 import Stats from '@/components/Stats'
 import Features from '@/components/Features'
 import ProductFeatures from '@/components/ProductFeatures'
+import HowItWorks from '@/components/HowItWorks'
 import Demos from '@/components/Demos'
 import Solutions from '@/components/Solutions'
 import Integrations from '@/components/Integrations'
@@ -47,23 +48,31 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="min-h-screen">
-        <Navbar />
-        <Hero />
-        <Stats />
-        <div id="features">
-          <Features />
+      <div className="min-h-screen relative">
+        {/* Nebula Gradient Effect - Subtle purple radial gradient in corner */}
+        <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-[#8c52ff] opacity-[0.05] rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/2 z-0" />
+        
+        <div className="relative z-10">
+          <Navbar />
+          <Hero />
+          <Stats />
+          <div id="features">
+            <Features />
+          </div>
+          <ProductFeatures />
+          <div id="how-it-works">
+            <HowItWorks />
+          </div>
+          <Demos />
+          <div id="solutions">
+            <Solutions />
+          </div>
+          <div id="integrations">
+            <Integrations />
+          </div>
+          <CTA />
+          <Footer />
         </div>
-        <ProductFeatures />
-        <Demos />
-        <div id="solutions">
-          <Solutions />
-        </div>
-        <div id="integrations">
-          <Integrations />
-        </div>
-        <CTA />
-        <Footer />
       </div>
     </>
   )

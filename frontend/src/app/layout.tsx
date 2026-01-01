@@ -67,6 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning className={plusJakartaSans.variable}>
       <head>
+        <link rel="icon" href="/logos/logo_tab.svg" type="image/svg+xml" />
         <link rel="canonical" href="https://heymello.ai" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         <meta name="format-detection" content="telephone=no" />

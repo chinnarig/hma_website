@@ -17,11 +17,11 @@ const Features = () => {
   const { features } = mockData;
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#211F23] via-[#272429] to-[#211F23]">
+    <section className="py-16 bg-[#0B0E14]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 text-white tracking-tight leading-tight">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-3 text-white tracking-tight leading-tight">
             Powerful Features for Modern Businesses
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
@@ -36,7 +36,7 @@ const Features = () => {
             return (
               <div 
                 key={index}
-                className="bg-[#252525] rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-brand/30 transition-all duration-300 group hover:-translate-y-2 border border-gray-700/50 hover:border-brand/50"
+                className="bg-[#141820] rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-brand/30 transition-all duration-300 group hover:-translate-y-2 border border-gray-800/50 hover:border-brand/50"
               >
                 <div className="w-14 h-14 bg-brand/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-brand/30 group-hover:bg-brand/30 group-hover:border-brand/50">
                   <Icon className="w-7 h-7 text-brand" />

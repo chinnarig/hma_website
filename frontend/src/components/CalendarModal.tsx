@@ -47,11 +47,11 @@ export default function CalendarModal({ isOpen, onClose }: CalendarModalProps) {
               <div className="relative">
                 {/* Spinning Circle */}
                 <div className="w-20 h-20 border-4 border-gray-200 border-t-brand rounded-full animate-spin"></div>
-                {/* Stylized Z Letter in Center with Effects */}
+                {/* Stylized M Letter in Center with Effects */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative">
                     <span className="text-4xl font-bold text-brand animate-pulse">
-                      Z
+                      M
                     </span>
                   </div>
                 </div>

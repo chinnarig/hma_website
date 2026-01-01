@@ -1,3 +1,13 @@
+// Commented out - How It Works is now a section on the home page
+// The content has been moved to the HowItWorks component on the home page
+// This page is kept for reference but is not currently in use
+// To restore, uncomment the code below
+
+export default function HowItWorksPage() {
+  return null;
+}
+
+/*
 'use client';
 
 import { useState } from 'react';
@@ -15,35 +25,35 @@ const HowItWorks = () => {
       icon: UserPlus,
       title: "Sign Up & Get Started",
       description: "Create your account and our team reaches out to understand your needs",
-                      color: "from-brand to-brand-600",
+      color: "from-brand to-brand-600",
     },
     {
       number: "02",
       icon: Headphones,
       title: "HeyMello Team Assists Setup",
       description: "Our experts help configure your voice agents, integrate tools, and customize for your business",
-                      color: "from-brand-600 to-brand",
+      color: "from-brand-600 to-brand",
     },
     {
       number: "03",
       icon: LayoutDashboard,
       title: "Access Your Dashboard",
       description: "Get your personalized dashboard link to manage agents, view metrics, and track billing",
-                      color: "from-brand to-brand-600",
+      color: "from-brand to-brand-600",
     },
     {
       number: "04",
       icon: Rocket,
       title: "Go Live with Agents",
       description: "Your AI voice agents are deployed and ready to handle calls 24/7",
-                      color: "from-brand-600 to-brand",
+      color: "from-brand-600 to-brand",
     },
     {
       number: "05",
       icon: Phone,
       title: "End-Users Call In",
       description: "Your customers interact with intelligent voice agents by simply calling your number",
-                      color: "from-brand to-brand-600",
+      color: "from-brand to-brand-600",
     },
   ];
 
@@ -52,7 +62,6 @@ const HowItWorks = () => {
     <div className="min-h-screen">
       <Navbar />
       <main className="pt-16 pb-12">
-        {/* Hero Section */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
@@ -69,15 +78,12 @@ const HowItWorks = () => {
           </div>
         </section>
 
-        {/* Onboarding Flow */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="relative">
-                {/* Connection Line */}
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand via-brand-600 to-brand opacity-20"></div>
                 
-                {/* Steps */}
                 <div className="space-y-8">
                   {steps.map((step, index) => (
                     <div
@@ -86,7 +92,6 @@ const HowItWorks = () => {
                         index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                       }`}
                     >
-                      {/* Step Content Card */}
                       <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl hover:border-brand/30 transition-all duration-300">
                         <div className="flex items-start gap-6">
                           <div className="flex-shrink-0">
@@ -104,12 +109,10 @@ const HowItWorks = () => {
                         </div>
                       </div>
 
-                      {/* Center Dot */}
                       <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
                         <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${step.color} shadow-lg border-4 border-white`}></div>
                       </div>
 
-                      {/* Spacer for alternating layout */}
                       <div className="hidden lg:block flex-1"></div>
                     </div>
                   ))}
@@ -119,7 +122,6 @@ const HowItWorks = () => {
           </div>
         </section>
 
-        {/* Dashboard Preview Section */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
@@ -157,7 +159,6 @@ const HowItWorks = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
@@ -169,14 +170,14 @@ const HowItWorks = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact-sales">
-                  <button className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold bg-brand hover:bg-brand-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                  <button className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold bg-brand hover:bg-brand-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all">
                     Contact Sales
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </button>
                 </Link>
                 <button 
                   onClick={() => setShowCalendar(true)}
-                  className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold border-2 border-brand text-brand rounded-lg hover:bg-brand hover:text-white transition-all"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold border-2 border-brand text-brand rounded-full hover:bg-brand hover:text-white transition-all"
                 >
                   Request a Demo
                 </button>
@@ -194,3 +195,4 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
+*/

@@ -187,13 +187,13 @@ export default function AboutUs() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/request-demo">
-                  <button className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold bg-brand hover:bg-brand-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                  <button className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold bg-brand hover:bg-brand-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all">
                     Request a Demo
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    {/* <ArrowRight className="ml-2 h-4 w-4" /> */}
                   </button>
                 </Link>
                 <Link href="/contact-sales">
-                  <button className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold border-2 border-brand text-brand rounded-lg hover:bg-brand hover:text-white transition-all">
+                  <button className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold border-2 border-brand text-brand rounded-full hover:bg-brand hover:text-white transition-all">
                     Contact Sales
                   </button>
                 </Link>

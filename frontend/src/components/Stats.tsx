@@ -7,7 +7,7 @@ const Stats = () => {
   const { stats } = mockData;
 
   return (
-    <section className="py-12 bg-[#211F23] border-t border-gray-800/50">
+    <section className="py-12 bg-[#0B0E14] border-t border-gray-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

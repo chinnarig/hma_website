@@ -13,26 +13,26 @@ const Hero: React.FC = () => {
 
   return (
     <>
-      <section className="relative min-h-[65vh] pt-16 pb-12 overflow-hidden bg-[#211F23]">
+      <section className="relative min-h-[65vh] pt-16 pb-12 overflow-hidden bg-[#0B0E14]">
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
-          <div className="text-left space-y-4">
+          <div className="text-left">
             {/* Badge */}
-            <div className="inline-block">
+            <div className="inline-block mb-4">
               <span className="px-4 py-2 bg-brand/20 text-brand border border-brand/30 rounded-full text-sm font-medium">
                 {hero.badge}
               </span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-white tracking-tight mb-4">
               AI Voice Agents That Understand Your Customers
             </h1>
 
             {/* Subtitle */}
-            <p className="text-sm md:text-base text-gray-300 max-w-xl mt-3 font-medium">
+            <p className="text-sm md:text-base text-gray-300 max-w-xl mb-10 font-medium">
               {hero.subtitle}
             </p>
 
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
                 className="bg-brand hover:bg-brand-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 group px-6 py-3 text-base font-semibold"
               >
                 {hero.ctaSecondary}
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {/* <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /> */}
               </Button>
             </div>
           </div>

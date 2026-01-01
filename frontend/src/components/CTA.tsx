@@ -27,7 +27,7 @@ const CTA = () => {
               className="bg-white hover:bg-gray-100 text-brand shadow-xl hover:shadow-2xl transition-all duration-300 group"
             >
               Request a Demo
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              {/* <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /> */}
             </Button>
             <Link href="/contact-sales">
               <Button 
