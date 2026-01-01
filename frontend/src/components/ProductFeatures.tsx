@@ -12,7 +12,7 @@ const ProductFeatures: React.FC = () => {
   const features: Feature[] = [
     {
       icon: Zap,
-      title: "Deploy in 3 Weeks",
+      title: "Deploy in less than 2 weeks",
       description: "Fast setup with no-code tools and flexible APIs",
     },
     {

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://heymello.ai',
     title: 'Hey Mello - AI Voice Agents for Automated Phone Calls',
-    description: 'Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support.',
+    description: 'Intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7.',
     siteName: 'Hey Mello',
   },
   twitter: {

@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
 
   return (
     <>
-      <section className="relative min-h-[65vh] pt-16 pb-12 overflow-hidden bg-gradient-to-b from-gray-900 via-gray-900 to-gray-900">
+      <section className="relative min-h-[65vh] pt-16 pb-12 overflow-hidden bg-[#211F23]">
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-sm md:text-base text-gray-400 max-w-xl mt-3 font-medium">
+            <p className="text-sm md:text-base text-gray-300 max-w-xl mt-3 font-medium">
               {hero.subtitle}
             </p>
 
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
           <div className="relative hidden lg:block">
             <div className="relative z-10 w-full h-full">
               {/* Placeholder for AI Voice Agents Image */}
-              <div className="relative w-full aspect-square max-w-lg mx-auto rounded-2xl overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border border-gray-700 shadow-xl shadow-brand/10">
+              <div className="relative w-full aspect-square max-w-lg mx-auto rounded-2xl overflow-hidden bg-gradient-to-br from-[#252525] via-[#1F1F1F] to-[#252525] border border-gray-700/50 shadow-xl shadow-brand/20">
                 <div className="absolute inset-0 flex items-center justify-center p-8">
                   <div className="text-center">
                     <div className="w-40 h-40 mx-auto mb-6 bg-brand/10 rounded-full flex items-center justify-center border border-brand/20">

@@ -411,9 +411,9 @@ export default function PricingPage() {
                 
                 <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-purple-50 rounded-xl shadow-sm">
                   <Phone className="w-10 h-10 text-purple-600 mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2">Talk to Our Agent</h3>
-                  <p className="text-sm text-gray-600 mb-3">Experience our AI voice agent directly</p>
-                  <a href="tel:+44-1695-665111" className="text-purple-600 font-semibold hover:underline">
+                  <h3 className="font-semibold mb-2 text-sm">Talk to Our Agent</h3>
+                  <p className="text-xs text-gray-600 mb-3 font-medium">Experience our AI voice agent directly</p>
+                  <a href="tel:+44-1695-665111" className="text-purple-600 font-semibold hover:underline text-sm">
                     +44 1695 665111
                   </a>
                 </div>
