@@ -13,10 +13,10 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Hey Mello - AI Voice Agents',
-  description: 'Deploy intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7. 1M+ calls processed, 10K+ active users.',
+  description: 'Intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7. 1M+ calls processed, 10K+ active users.',
   openGraph: {
     title: 'AI Voice Agents That Understand Your Customers | Hey Mello',
-    description: 'Deploy intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7.',
+    description: 'Intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7.',
     url: 'https://heymello.ai',
     type: 'website',
   },

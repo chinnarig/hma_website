@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     default: 'Hey Mello - AI Voice Agents for Automated Phone Calls',
     template: '%s | Hey Mello'
   },
-  description: 'Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support. Deploy intelligent voice agents that deliver natural conversations and exceptional customer experiences.',
+  description: 'Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support. Intelligent voice agents that deliver natural conversations and exceptional customer experiences.',
   keywords: ['AI voice agents', 'automated phone calls', 'customer support AI', 'voice automation', 'enterprise AI', 'call center automation', 'AI phone system'],
   authors: [{ name: 'Hey Mello' }],
   creator: 'Hey Mello',
@@ -25,12 +25,21 @@ export const metadata: Metadata = {
     title: 'Hey Mello - AI Voice Agents for Automated Phone Calls',
     description: 'Intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7.',
     siteName: 'Hey Mello',
+    images: [
+      {
+        url: '/heroimage_1.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Hey Mello AI Voice Agents - Customer Support',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Hey Mello - AI Voice Agents for Automated Phone Calls',
     description: 'Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support.',
     creator: '@heymelloai',
+    images: ['/heroimage_1.jpeg'],
   },
   robots: {
     index: true,
@@ -44,8 +53,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
+    google: 'MfUQY4IKHGZLs5iALhyqZebKCKuZsgG1Kw5vqmVABFE',
   },
 }
 

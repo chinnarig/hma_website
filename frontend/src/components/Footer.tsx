@@ -14,11 +14,11 @@ const Footer = () => {
           <div className="col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <Image
-                src="/logos/logo1.svg"
+                src="/logos/website_logo_new.svg"
                 alt="Hey Mello Logo"
                 width={40}
                 height={40}
-                className="w-10 h-10 brightness-150 drop-shadow-[0_0_8px_rgba(140,82,255,0.6)]"
+                className="w-10 h-10"
               />
               <div className="text-2xl font-semibold text-white tracking-tight">
                 <span className="font-semibold">Hey Mello</span>

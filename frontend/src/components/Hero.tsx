@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
 import { mockData } from '@/data/mockData';
@@ -49,23 +50,17 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Visual - AI Voice Agents Image Placeholder */}
+          {/* Right Visual - AI Voice Agents Image */}
           <div className="relative hidden lg:block">
             <div className="relative z-10 w-full h-full">
-              {/* Placeholder for AI Voice Agents Image */}
-              <div className="relative w-full aspect-square max-w-lg mx-auto rounded-2xl overflow-hidden bg-gradient-to-br from-[#252525] via-[#1F1F1F] to-[#252525] border border-gray-700/50 shadow-xl shadow-brand/20">
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                  <div className="text-center">
-                    <div className="w-40 h-40 mx-auto mb-6 bg-brand/10 rounded-full flex items-center justify-center border border-brand/20">
-                      <svg className="w-20 h-20 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">AI Voice Agents</h3>
-                    <p className="text-gray-400 text-sm mb-4">Intelligent Solutions for Your Business</p>
-                    <p className="text-gray-500 text-xs">Add your image: /public/images/ai-voice-agents.jpg</p>
-                  </div>
-                </div>
+              <div className="relative w-full aspect-[4/3] max-w-2xl mx-auto rounded-2xl overflow-hidden border border-gray-700/50 shadow-xl shadow-brand/20">
+                <Image
+                  src="/heroimage_1.jpeg"
+                  alt="AI Voice Agent - Customer Support"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>

@@ -31,6 +31,28 @@ export default function ContactSales() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [emailError, setEmailError] = useState('');
+
+  // List of common personal email domains to block
+  const personalEmailDomains = [
+    'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com',
+    'icloud.com', 'mail.com', 'protonmail.com', 'yandex.com', 'zoho.com',
+    'live.com', 'msn.com', 'me.com', 'googlemail.com', 'yahoo.co.uk',
+    'hotmail.co.uk', 'outlook.co.uk', 'gmx.com', 'mail.ru', 'qq.com'
+  ];
+
+  const validateWorkEmail = (email: string): boolean => {
+    if (!email) return true; // Let required validation handle empty field
+
+    const emailDomain = email.toLowerCase().split('@')[1];
+    if (personalEmailDomains.includes(emailDomain)) {
+      setEmailError('Please use a work email address. Personal email addresses are not accepted.');
+      return false;
+    }
+
+    setEmailError('');
+    return true;
+  };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     const { name, value } = e.target;
@@ -38,10 +60,21 @@ export default function ContactSales() {
       ...prev,
       [name]: value
     }));
+
+    // Validate email on change
+    if (name === 'email') {
+      validateWorkEmail(value);
+    }
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
+
+    // Validate work email before submitting
+    if (!validateWorkEmail(formData.email)) {
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus('idle');
     setErrorMessage('');
@@ -83,17 +116,17 @@ export default function ContactSales() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navbar />
-      <main className="pt-24 pb-16">
+      <main className="pt-24 pb-16 bg-white">
         {/* Hero Section */}
-        <section className="py-8 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+        <section className="py-12 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4 text-gray-900 tracking-tight">
                 Let's Transform Your Business Together
               </h1>
-              <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
                 Our team is ready to help you deploy AI voice agents and revolutionize your customer experience.
               </p>
             </div>
@@ -106,47 +139,44 @@ export default function ContactSales() {
             <div className="max-w-3xl mx-auto">
               {/* Benefits */}
               <div className="grid md:grid-cols-3 gap-6 mb-12">
-                <div className="text-center p-6 bg-purple-50 rounded-xl">
-                  <div className="w-12 h-12 bg-brand rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-6 h-6 text-white" />
+                <div className="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                  <div className="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mx-auto mb-4 border border-brand/20">
+                    <Phone className="w-7 h-7 text-brand" />
                   </div>
-                  <h3 className="font-semibold mb-2 text-sm">Quick Response</h3>
-                  <p className="text-xs text-gray-600 font-medium">We'll get back to you within 24 hours</p>
+                  <h3 className="font-semibold mb-2 text-base text-gray-900">Quick Response</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">We'll get back to you within 24 hours</p>
                 </div>
-                
-                <div className="text-center p-6 bg-blue-50 rounded-xl">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <User className="w-6 h-6 text-white" />
+
+                <div className="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                  <div className="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mx-auto mb-4 border border-brand/20">
+                    <User className="w-7 h-7 text-brand" />
                   </div>
-                  <h3 className="font-semibold mb-2">Expert Guidance</h3>
-                  <p className="text-sm text-gray-600">Talk to our AI voice specialists</p>
+                  <h3 className="font-semibold mb-2 text-base text-gray-900">Expert Guidance</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">Talk to our AI voice specialists</p>
                 </div>
-                
-                <div className="text-center p-6 bg-pink-50 rounded-xl">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Building className="w-6 h-6 text-white" />
+
+                <div className="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                  <div className="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mx-auto mb-4 border border-brand/20">
+                    <Building className="w-7 h-7 text-brand" />
                   </div>
-                  <h3 className="font-semibold mb-2">Custom Solutions</h3>
-                  <p className="text-sm text-gray-600">Tailored to your business needs</p>
+                  <h3 className="font-semibold mb-2 text-base text-gray-900">Custom Solutions</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">Tailored to your business needs</p>
                 </div>
               </div>
 
               {/* Form */}
-              <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 md:p-12 relative overflow-hidden">
-                {/* Background gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand/5 via-transparent to-brand/5 pointer-events-none"></div>
-                
-                <div className="relative">
-                  <h2 className="text-2xl font-semibold mb-2 text-gray-900">Contact Our Sales Team</h2>
-                  <p className="text-gray-600 mb-8 text-sm font-medium">Let's discuss how AI voice agents can transform your business</p>
+              <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-medium mb-3 text-gray-900 tracking-tight">Contact Our Sales Team</h2>
+                  <p className="text-gray-600 mb-10 text-base leading-relaxed">Let's discuss how AI voice agents can transform your business</p>
                   
-                  <form onSubmit={handleSubmit} className="space-y-8">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Fields */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="group">
-                      <label htmlFor="firstName" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
-                        First Name 
-                        <span className="ml-1 text-brand font-bold">*</span>
+                      <label htmlFor="firstName" className="block text-base font-medium text-gray-900 mb-2 flex items-center">
+                        First Name
+                        <span className="ml-1 text-brand">*</span>
                       </label>
                       <Input
                         id="firstName"
@@ -155,14 +185,14 @@ export default function ContactSales() {
                         required
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                        className="w-full h-12 border border-gray-300 rounded-lg focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white hover:border-gray-400"
                         placeholder=""
                       />
                     </div>
                     <div className="group">
-                      <label htmlFor="lastName" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
-                        Last Name 
-                        <span className="ml-1 text-brand font-bold">*</span>
+                      <label htmlFor="lastName" className="block text-base font-medium text-gray-900 mb-2 flex items-center">
+                        Last Name
+                        <span className="ml-1 text-brand">*</span>
                       </label>
                       <Input
                         id="lastName"
@@ -171,7 +201,7 @@ export default function ContactSales() {
                         required
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                        className="w-full h-12 border border-gray-300 rounded-lg focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white hover:border-gray-400"
                         placeholder=""
                       />
                     </div>
@@ -179,12 +209,12 @@ export default function ContactSales() {
 
                   {/* Email */}
                   <div className="group">
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
-                      Work Email 
-                      <span className="ml-1 text-purple-600 font-bold">*</span>
+                    <label htmlFor="email" className="block text-base font-medium text-gray-900 mb-2 flex items-center">
+                      Work Email
+                      <span className="ml-1 text-brand">*</span>
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors duration-300" />
+                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors" />
                       <Input
                         id="email"
                         name="email"
@@ -192,20 +222,27 @@ export default function ContactSales() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full h-12 pl-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                        className={`w-full h-12 pl-12 border rounded-lg focus:ring-2 transition-all bg-white ${
+                          emailError
+                            ? 'border-red-500 focus:border-red-500 focus:ring-red-200'
+                            : 'border-gray-300 focus:border-brand focus:ring-brand/20 hover:border-gray-400'
+                        }`}
                         placeholder=""
                       />
                     </div>
+                    {emailError && (
+                      <p className="mt-2 text-sm text-red-600 leading-relaxed">{emailError}</p>
+                    )}
                   </div>
 
                   {/* Phone */}
                   <div className="group">
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
-                      Phone Number 
-                      <span className="ml-1 text-purple-600 font-bold">*</span>
+                    <label htmlFor="phone" className="block text-base font-medium text-gray-900 mb-2 flex items-center">
+                      Phone Number
+                      <span className="ml-1 text-brand">*</span>
                     </label>
                     <div className="relative">
-                      <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors duration-300" />
+                      <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors" />
                       <Input
                         id="phone"
                         name="phone"
@@ -213,7 +250,7 @@ export default function ContactSales() {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full h-12 pl-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                        className="w-full h-12 pl-12 border border-gray-300 rounded-lg focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white hover:border-gray-400"
                         placeholder=""
                       />
                     </div>
@@ -221,12 +258,12 @@ export default function ContactSales() {
 
                   {/* Company */}
                   <div className="group">
-                    <label htmlFor="company" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
-                      Company Name 
-                      <span className="ml-1 text-purple-600 font-bold">*</span>
+                    <label htmlFor="company" className="block text-base font-medium text-gray-900 mb-2 flex items-center">
+                      Company Name
+                      <span className="ml-1 text-brand">*</span>
                     </label>
                     <div className="relative">
-                      <Building className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors duration-300" />
+                      <Building className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors" />
                       <Input
                         id="company"
                         name="company"
@@ -234,7 +271,7 @@ export default function ContactSales() {
                         required
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full h-12 pl-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                        className="w-full h-12 pl-12 border border-gray-300 rounded-lg focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white hover:border-gray-400"
                         placeholder=""
                       />
                     </div>
@@ -242,7 +279,7 @@ export default function ContactSales() {
 
                   {/* Job Title */}
                   <div className="group">
-                    <label htmlFor="jobTitle" className="block text-sm font-semibold text-gray-800 mb-3">
+                    <label htmlFor="jobTitle" className="block text-base font-medium text-gray-900 mb-2">
                       Job Title
                     </label>
                     <Input
@@ -251,14 +288,14 @@ export default function ContactSales() {
                       type="text"
                       value={formData.jobTitle}
                       onChange={handleChange}
-                      className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                      className="w-full h-12 border border-gray-300 rounded-lg focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white hover:border-gray-400"
                       placeholder=""
                     />
                   </div>
 
                   {/* Message */}
                   <div className="group">
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-800 mb-3">
+                    <label htmlFor="message" className="block text-base font-medium text-gray-900 mb-2">
                       Tell us about your needs
                     </label>
                     <Textarea
@@ -267,24 +304,24 @@ export default function ContactSales() {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300 resize-none"
+                      className="w-full border border-gray-300 rounded-lg focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white hover:border-gray-400 resize-none"
                       placeholder=""
                     />
                   </div>
 
                   {/* Success Message */}
                   {submitStatus === 'success' && (
-                    <div className="p-4 bg-green-50 border border-green-200 rounded-xl">
-                      <p className="text-green-800 font-semibold">✓ Inquiry submitted successfully!</p>
-                      <p className="text-green-700 text-sm mt-1">Our sales team will contact you within 24 hours.</p>
+                    <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                      <p className="text-green-800 font-medium text-base">✓ Inquiry submitted successfully!</p>
+                      <p className="text-green-700 text-sm mt-1 leading-relaxed">Our sales team will contact you within 24 hours.</p>
                     </div>
                   )}
 
                   {/* Error Message */}
                   {submitStatus === 'error' && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
-                      <p className="text-red-800 font-semibold">✗ Error submitting form</p>
-                      <p className="text-red-700 text-sm mt-1">{errorMessage}</p>
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <p className="text-red-800 font-medium text-base">✗ Error submitting form</p>
+                      <p className="text-red-700 text-sm mt-1 leading-relaxed">{errorMessage}</p>
                     </div>
                   )}
 
@@ -293,14 +330,14 @@ export default function ContactSales() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-14 bg-brand hover:bg-brand-600 text-white font-semibold text-base rounded-full shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full h-12 bg-brand hover:bg-brand-600 text-white font-medium text-base rounded-lg shadow-lg hover:shadow-xl transition-all group disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? 'Submitting...' : 'Submit Request'}
                       {!isSubmitting && <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                     </Button>
                   </div>
 
-                  <p className="text-sm text-gray-500 text-center">
+                  <p className="text-sm text-gray-500 text-center leading-relaxed">
                     By submitting this form, you agree to our privacy policy and terms of service.
                   </p>
                 </form>
@@ -314,38 +351,34 @@ export default function ContactSales() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-xl font-semibold text-center mb-8">Other Ways to Reach Us</h2>
-              
+              <h2 className="text-2xl md:text-3xl font-medium text-center mb-10 text-gray-900 tracking-tight">Other Ways to Reach Us</h2>
+
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                  <Phone className="w-10 h-10 text-brand mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2 text-sm">Call Us</h3>
-                  <p className="text-xs text-gray-600 mb-3 font-medium">Mon-Fri, 9am-6pm EST</p>
-
-                  <a href="tel:+44-1695-665111" className="text-brand font-semibold hover:underline text-sm">
+                <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+                  <Phone className="w-12 h-12 text-brand mb-4 mx-auto" />
+                  <h3 className="font-semibold mb-2 text-base text-gray-900">Call Us</h3>
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">Mon-Fri, 9am-6pm EST</p>
+                  <a href="tel:+44-1695-665111" className="text-brand font-medium hover:underline text-base">
                     +44 1695 665111
-
                   </a>
                 </div>
-                
-                <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                  <Mail className="w-10 h-10 text-brand mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2 text-sm">Email Us</h3>
-                  <p className="text-xs text-gray-600 mb-3 font-medium">Response within 24 hours</p>
+
+                <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+                  <Mail className="w-12 h-12 text-brand mb-4 mx-auto" />
+                  <h3 className="font-semibold mb-2 text-base text-gray-900">Email Us</h3>
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">Response within 24 hours</p>
                   {/* TODO: Replace admin@heymello.ai with sales@heymello.ai when sales email is ready */}
-                  <a href="mailto:admin@heymello.ai" className="text-brand font-semibold hover:underline text-sm">
+                  <a href="mailto:admin@heymello.ai" className="text-brand font-medium hover:underline text-base">
                     admin@heymello.ai
                   </a>
                 </div>
-                
-                <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                  <Phone className="w-10 h-10 text-purple-600 mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2 text-sm">Talk to Our Agent</h3>
-                  <p className="text-xs text-gray-600 mb-3 font-medium">Experience our AI voice agent directly</p>
 
-                  <a href="tel:+44-169-566-5111" className="text-brand font-semibold hover:underline text-sm">
+                <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+                  <Phone className="w-12 h-12 text-brand mb-4 mx-auto" />
+                  <h3 className="font-semibold mb-2 text-base text-gray-900">Talk to Our Agent</h3>
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">Experience our AI voice agent directly</p>
+                  <a href="tel:+44-169-566-5111" className="text-brand font-medium hover:underline text-base">
                     +44 1695 665111
-
                   </a>
                 </div>
               </div>

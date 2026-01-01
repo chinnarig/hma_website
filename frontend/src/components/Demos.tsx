@@ -2,6 +2,7 @@
 
 import { Play } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 interface Demo {
   title: string;
@@ -104,26 +105,32 @@ const Demos: React.FC = () => {
           {demos.map((demo, index) => (
             <div
               key={index}
-              className="group relative bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-2xl hover:border-gray-300 transition-all duration-300 hover:-translate-y-2"
+              onClick={() => handlePlayPause(index)}
+              className="group relative bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-2xl hover:border-gray-300 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
             >
               {/* Video placeholder with play button and wave animation */}
-              <div className="relative aspect-video bg-gray-100 rounded-xl mb-4 overflow-hidden">
-                <div className="absolute inset-0 z-10 flex items-center justify-center">
-                  <button
-                    onClick={() => handlePlayPause(index)}
-                    className="relative z-10 rounded-full w-16 h-16 bg-brand flex items-center justify-center group-hover:scale-110 transition-all shadow-xl"
-                  >
+              <div className="relative aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl mb-4 overflow-hidden">
+                <Image
+                  src="/demo_image.jpeg"
+                  alt={`${demo.title} AI Voice Agent Demo`}
+                  fill
+                  className="object-cover scale-125"
+                />
+                {/* Subtle gradient overlay for better button visibility */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent z-5"></div>
+                <div className="absolute inset-0 z-10 flex items-end justify-end p-3">
+                  <div className="relative z-10 rounded-full w-12 h-12 bg-brand/95 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-all shadow-lg">
                     {playingIndex === index ? (
-                      <div className="flex items-end gap-1 h-6">
-                        <span className="w-1.5 rounded-sm bg-white animate-wave-1" style={{animation: 'wave 1s ease-in-out infinite'}}></span>
-                        <span className="w-1.5 rounded-sm bg-white animate-wave-2" style={{animation: 'wave 1s ease-in-out 0.1s infinite'}}></span>
-                        <span className="w-1.5 rounded-sm bg-white animate-wave-3" style={{animation: 'wave 1s ease-in-out 0.2s infinite'}}></span>
-                        <span className="w-1.5 rounded-sm bg-white animate-wave" style={{animation: 'wave 1s ease-in-out 0.3s infinite'}}></span>
+                      <div className="flex items-end gap-0.5 h-4">
+                        <span className="w-1 rounded-sm bg-white animate-wave-1" style={{animation: 'wave 1s ease-in-out infinite'}}></span>
+                        <span className="w-1 rounded-sm bg-white animate-wave-2" style={{animation: 'wave 1s ease-in-out 0.1s infinite'}}></span>
+                        <span className="w-1 rounded-sm bg-white animate-wave-3" style={{animation: 'wave 1s ease-in-out 0.2s infinite'}}></span>
+                        <span className="w-1 rounded-sm bg-white animate-wave" style={{animation: 'wave 1s ease-in-out 0.3s infinite'}}></span>
                       </div>
                     ) : (
-                      <Play className="h-6 w-6 text-white ml-1" />
+                      <Play className="h-5 w-5 text-white ml-0.5" />
                     )}
-                  </button>
+                  </div>
                 </div>
               </div>
 
