@@ -54,6 +54,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: 'swap',
   variable: '--font-plus-jakarta-sans',
   weight: ['300', '400', '500', '600', '700', '800'],
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+  preload: true,
+  adjustFontFallback: true,
 })
 
 export default function RootLayout({

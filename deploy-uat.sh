@@ -20,7 +20,7 @@ NC='\033[0m'
 # UAT Configuration
 # =============================================================================
 
-PROJECT_ID="heymello-ai"                 # UAT GCP Project
+PROJECT_ID="zlavox-ai"                 # UAT GCP Project
 SERVICE_NAME="heymello-uat-website"      # Cloud Run service name
 REGION="us-central1"                   # GCP region
 DB_HOST="35.232.108.201"               # Shared database host
