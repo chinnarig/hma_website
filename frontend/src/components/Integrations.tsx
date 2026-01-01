@@ -8,11 +8,11 @@ const Integrations = () => {
   const { integrations } = mockData;
 
   return (
-    <section id="integrations" className="py-20 bg-gray-100">
+    <section id="integrations" className="py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 tracking-tight leading-tight">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 text-gray-900 tracking-tight leading-tight">
             Seamless Integrations
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -27,14 +27,14 @@ const Integrations = () => {
               key={index}
               className="group cursor-pointer"
             >
-              <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-gray-300 relative overflow-hidden">
+              <div className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-gray-300 relative overflow-hidden">
                 
                 {/* Content */}
                 <div className="relative z-10 text-center">
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
+                  <h3 className="text-base font-semibold text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
                     {integration.name}
                   </h3>
-                  <div className="w-12 h-1 bg-brand mx-auto mt-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                  <div className="w-12 h-1 bg-brand mx-auto mt-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                 </div>
               </div>
             </div>
@@ -42,9 +42,9 @@ const Integrations = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-            <p className="text-lg text-gray-700 mb-4">
+        <div className="text-center mt-12">
+          <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+            <p className="text-lg text-gray-700 mb-3">
               Need a custom integration for your specific workflow?
             </p>
             <Link 

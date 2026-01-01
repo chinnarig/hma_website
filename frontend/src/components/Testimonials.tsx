@@ -8,11 +8,11 @@ const Testimonials = () => {
   const { testimonials } = mockData;
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 tracking-tight leading-tight">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 text-gray-900 tracking-tight leading-tight">
             Loved by Businesses Worldwide
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -21,21 +21,21 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
               {/* Stars */}
-              <div className="flex space-x-1 mb-4">
+              <div className="flex space-x-1 mb-3">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
 
               {/* Testimonial */}
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-4 leading-relaxed text-sm font-medium">
                 "{testimonial.testimonial}"
               </p>
 
@@ -45,8 +45,8 @@ const Testimonials = () => {
                   {testimonial.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">{testimonial.role}</div>
+                  <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
+                  <div className="text-xs text-gray-600">{testimonial.role}</div>
                 </div>
               </div>
             </div>

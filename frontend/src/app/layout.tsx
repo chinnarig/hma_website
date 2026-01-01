@@ -1,6 +1,6 @@
 import './globals.css'
 import { Metadata } from 'next'
-import { Space_Grotesk } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://heymello.ai'),
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
   },
 }
 
-const spaceGrotesk = Space_Grotesk({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-space-grotesk',
-  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-plus-jakarta-sans',
+  weight: ['300', '400', '500', '600', '700', '800'],
 })
 
 export default function RootLayout({
@@ -62,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning className={spaceGrotesk.variable}>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning className={plusJakartaSans.variable}>
       <head>
         <link rel="canonical" href="https://heymello.ai" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
@@ -70,7 +70,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body className={`min-h-screen antialiased font-sans ${spaceGrotesk.variable}`} suppressHydrationWarning>{children}</body>
+      <body className={`min-h-screen antialiased font-sans ${plusJakartaSans.variable}`} suppressHydrationWarning>{children}</body>
     </html>
   )
 }

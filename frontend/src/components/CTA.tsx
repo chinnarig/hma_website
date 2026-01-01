@@ -11,12 +11,12 @@ const CTA = () => {
 
   return (
     <>
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
+      <section className="py-16 bg-gray-900 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight leading-tight">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-3 tracking-tight leading-tight">
             Ready to Transform Your Customer Experience?
           </h2>
-          <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-400 mb-6 max-w-2xl mx-auto leading-relaxed">
             Join thousands of businesses using AI voice agents to scale their operations.
           </p>
 

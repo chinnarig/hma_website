@@ -23,31 +23,31 @@ const Navbar: React.FC = () => {
               alt="Hey Mello Logo"
               width={40}
               height={40}
-              className="w-10 h-10"
+              className="w-10 h-10 brightness-150 drop-shadow-[0_0_8px_rgba(140,82,255,0.6)]"
             />
-            <div className="text-2xl font-bold text-white tracking-tight">
-              <span className="font-extrabold">Hey Mello</span>
+            <div className="text-2xl font-semibold text-white tracking-tight">
+              <span className="font-semibold">Hey Mello</span>
             </div>
           </Link>
 
           {/* Desktop Navigation - Moved to Right */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/" className="text-gray-300 hover:text-white transition-colors font-medium">
               Home
             </Link>
-            <Link href="/#solutions" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/#solutions" className="text-gray-300 hover:text-white transition-colors font-medium">
               Solutions
             </Link>
-            <Link href="/how-it-works" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/how-it-works" className="text-gray-300 hover:text-white transition-colors font-medium">
               How It Works
             </Link>
-            <Link href="/#integrations" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/#integrations" className="text-gray-300 hover:text-white transition-colors font-medium">
               Integrations
             </Link>
-            <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors font-medium">
               Pricing
             </Link>
-            <Link href="/help-center" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/help-center" className="text-gray-300 hover:text-white transition-colors font-medium">
               Help Center
             </Link>
             
@@ -74,22 +74,22 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden bg-gray-900 border-t border-gray-800">
           <div className="px-4 pt-2 pb-4 space-y-2">
-            <Link href="/" className="block py-2 text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>
+            <Link href="/" className="block py-2 text-gray-300 hover:text-white font-medium" onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link href="/#solutions" className="block py-2 text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>
+            <Link href="/#solutions" className="block py-2 text-gray-300 hover:text-white font-medium" onClick={() => setIsOpen(false)}>
               Solutions
             </Link>
-            <Link href="/how-it-works" className="block py-2 text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>
+            <Link href="/how-it-works" className="block py-2 text-gray-300 hover:text-white font-medium" onClick={() => setIsOpen(false)}>
               How It Works
             </Link>
-            <Link href="/#integrations" className="block py-2 text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>
+            <Link href="/#integrations" className="block py-2 text-gray-300 hover:text-white font-medium" onClick={() => setIsOpen(false)}>
               Integrations
             </Link>
-            <Link href="/pricing" className="block py-2 text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>
+            <Link href="/pricing" className="block py-2 text-gray-300 hover:text-white font-medium" onClick={() => setIsOpen(false)}>
               Pricing
             </Link>
-            <Link href="/help-center" className="block py-2 text-gray-300 hover:text-white" onClick={() => setIsOpen(false)}>
+            <Link href="/help-center" className="block py-2 text-gray-300 hover:text-white font-medium" onClick={() => setIsOpen(false)}>
               Help Center
             </Link>
             <Button 

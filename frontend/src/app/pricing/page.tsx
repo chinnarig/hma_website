@@ -123,16 +123,16 @@ export default function PricingPage() {
       <Navbar />
       <main className="pt-24 pb-16">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+        <section className="py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
                 Simple pricing that scales with your needs
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto font-medium">
                 Scale your AI voice assistant with confidence across your organization and use cases with a transparent pricing structure.
               </p>
-              <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
+              <p className="text-sm md:text-base text-gray-600 mt-4 max-w-2xl mx-auto font-medium">
                 Ongoing use of the voice assistant is priced on a per-minute basis, which includes proactive performance improvements, maintenance and 24/7 support.
               </p>
             </div>
@@ -140,10 +140,10 @@ export default function PricingPage() {
         </section>
 
         {/* Included Features Section */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-12">
                 Included in all plans
               </h2>
               
@@ -152,11 +152,11 @@ export default function PricingPage() {
                   const IconComponent = feature.icon;
                   return (
                     <div key={index} className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                      <div className="w-12 h-12 bg-brand rounded-lg flex items-center justify-center mb-4">
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                      <p className="text-gray-600">{feature.description}</p>
+                      <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
+                      <p className="text-gray-600 text-sm font-medium">{feature.description}</p>
                     </div>
                   );
                 })}
@@ -166,26 +166,26 @@ export default function PricingPage() {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+        <section className="py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
                   Ready to hear it for yourself?
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-base md:text-lg text-gray-600 font-medium">
                   Get a personalized demo to learn how HeyMello AI can help you drive measurable business value.
                 </p>
               </div>
 
               {/* Form */}
-              <div className="bg-white rounded-3xl shadow-2xl border border-purple-100 p-8 md:p-12 relative overflow-hidden">
+              <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 md:p-12 relative overflow-hidden">
                 {/* Background gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 via-transparent to-blue-50/30 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-brand/5 via-transparent to-brand/5 pointer-events-none"></div>
                 
                 <div className="relative">
-                  <h3 className="text-3xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Request Pricing Information</h3>
-                  <p className="text-gray-600 mb-8">Get personalized pricing for your business needs</p>
+                  <h3 className="text-2xl font-semibold mb-2 text-gray-900">Request Pricing Information</h3>
+                  <p className="text-gray-600 mb-8 text-sm font-medium">Get personalized pricing for your business needs</p>
                 
                 <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Name Fields */}
@@ -193,7 +193,7 @@ export default function PricingPage() {
                     <div className="group">
                       <label htmlFor="firstName" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
                         First Name 
-                        <span className="ml-1 text-purple-600 font-bold">*</span>
+                        <span className="ml-1 text-brand font-bold">*</span>
                       </label>
                       <Input
                         id="firstName"
@@ -202,14 +202,14 @@ export default function PricingPage() {
                         required
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
                         placeholder=""
                       />
                     </div>
                     <div className="group">
                       <label htmlFor="lastName" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
                         Last Name 
-                        <span className="ml-1 text-purple-600 font-bold">*</span>
+                        <span className="ml-1 text-brand font-bold">*</span>
                       </label>
                       <Input
                         id="lastName"
@@ -218,7 +218,7 @@ export default function PricingPage() {
                         required
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
                         placeholder=""
                       />
                     </div>
@@ -252,7 +252,7 @@ export default function PricingPage() {
                       <span className="ml-1 text-purple-600 font-bold">*</span>
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-purple-500 w-5 h-5 transition-colors duration-300" />
+                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors duration-300" />
                       <Input
                         id="email"
                         name="email"
@@ -291,7 +291,7 @@ export default function PricingPage() {
                       <span className="ml-1 text-purple-600 font-bold">*</span>
                     </label>
                     <div className="relative">
-                      <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-purple-500 w-5 h-5 transition-colors duration-300" />
+                      <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors duration-300" />
                       <Input
                         id="phone"
                         name="phone"
@@ -340,7 +340,7 @@ export default function PricingPage() {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300 resize-none"
+                      className="w-full border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300 resize-none"
                       placeholder=""
                     />
                   </div>
@@ -366,7 +366,7 @@ export default function PricingPage() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-14 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full h-14 bg-brand hover:bg-brand-600 text-white font-semibold text-base rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? 'Submitting...' : 'Request Pricing Info'}
                       {!isSubmitting && <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />}
@@ -387,24 +387,24 @@ export default function PricingPage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-center mb-8">Other Ways to Reach Us</h2>
+              <h2 className="text-xl font-semibold text-center mb-8">Other Ways to Reach Us</h2>
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl shadow-sm">
-                  <Phone className="w-10 h-10 text-purple-600 mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2">Call Us</h3>
-                  <p className="text-sm text-gray-600 mb-3">Mon-Fri, 9am-6pm EST</p>
-                  <a href="tel:+44-1695-665111" className="text-purple-600 font-semibold hover:underline">
+                  <Phone className="w-10 h-10 text-brand mb-4 mx-auto" />
+                  <h3 className="font-semibold mb-2 text-sm">Call Us</h3>
+                  <p className="text-xs text-gray-600 mb-3 font-medium">Mon-Fri, 9am-6pm EST</p>
+                  <a href="tel:+44-1695-665111" className="text-brand font-semibold hover:underline text-sm">
                     +44 1695 665111
                   </a>
                 </div>
                 
                 <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl shadow-sm">
-                  <Mail className="w-10 h-10 text-purple-600 mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2">Email Us</h3>
-                  <p className="text-sm text-gray-600 mb-3">Response within 24 hours</p>
+                  <Mail className="w-10 h-10 text-brand mb-4 mx-auto" />
+                  <h3 className="font-semibold mb-2 text-sm">Email Us</h3>
+                  <p className="text-xs text-gray-600 mb-3 font-medium">Response within 24 hours</p>
                   {/* TODO: Replace admin@heymello.ai with sales@heymello.ai when sales email is ready */}
-                  <a href="mailto:admin@heymello.ai" className="text-purple-600 font-semibold hover:underline">
+                  <a href="mailto:admin@heymello.ai" className="text-brand font-semibold hover:underline text-sm">
                     admin@heymello.ai
                   </a>
                 </div>

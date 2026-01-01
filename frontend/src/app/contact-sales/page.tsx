@@ -90,10 +90,10 @@ export default function ContactSales() {
         <section className="py-8 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
                 Let's Transform Your Business Together
               </h1>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-medium">
                 Our team is ready to help you deploy AI voice agents and revolutionize your customer experience.
               </p>
             </div>
@@ -107,11 +107,11 @@ export default function ContactSales() {
               {/* Benefits */}
               <div className="grid md:grid-cols-3 gap-6 mb-12">
                 <div className="text-center p-6 bg-purple-50 rounded-xl">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-brand rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-semibold mb-2">Quick Response</h3>
-                  <p className="text-sm text-gray-600">We'll get back to you within 24 hours</p>
+                  <h3 className="font-semibold mb-2 text-sm">Quick Response</h3>
+                  <p className="text-xs text-gray-600 font-medium">We'll get back to you within 24 hours</p>
                 </div>
                 
                 <div className="text-center p-6 bg-blue-50 rounded-xl">
@@ -132,13 +132,13 @@ export default function ContactSales() {
               </div>
 
               {/* Form */}
-              <div className="bg-white rounded-3xl shadow-2xl border border-purple-100 p-8 md:p-12 relative overflow-hidden">
+              <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 md:p-12 relative overflow-hidden">
                 {/* Background gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 via-transparent to-blue-50/30 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-brand/5 via-transparent to-brand/5 pointer-events-none"></div>
                 
                 <div className="relative">
-                  <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Contact Our Sales Team</h2>
-                  <p className="text-gray-600 mb-8">Let's discuss how AI voice agents can transform your business</p>
+                  <h2 className="text-2xl font-semibold mb-2 text-gray-900">Contact Our Sales Team</h2>
+                  <p className="text-gray-600 mb-8 text-sm font-medium">Let's discuss how AI voice agents can transform your business</p>
                   
                   <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Name Fields */}
@@ -146,7 +146,7 @@ export default function ContactSales() {
                     <div className="group">
                       <label htmlFor="firstName" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
                         First Name 
-                        <span className="ml-1 text-purple-600 font-bold">*</span>
+                        <span className="ml-1 text-brand font-bold">*</span>
                       </label>
                       <Input
                         id="firstName"
@@ -155,14 +155,14 @@ export default function ContactSales() {
                         required
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
                         placeholder=""
                       />
                     </div>
                     <div className="group">
                       <label htmlFor="lastName" className="block text-sm font-semibold text-gray-800 mb-3 flex items-center">
                         Last Name 
-                        <span className="ml-1 text-purple-600 font-bold">*</span>
+                        <span className="ml-1 text-brand font-bold">*</span>
                       </label>
                       <Input
                         id="lastName"
@@ -171,7 +171,7 @@ export default function ContactSales() {
                         required
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
+                        className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300"
                         placeholder=""
                       />
                     </div>
@@ -184,7 +184,7 @@ export default function ContactSales() {
                       <span className="ml-1 text-purple-600 font-bold">*</span>
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-purple-500 w-5 h-5 transition-colors duration-300" />
+                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors duration-300" />
                       <Input
                         id="email"
                         name="email"
@@ -205,7 +205,7 @@ export default function ContactSales() {
                       <span className="ml-1 text-purple-600 font-bold">*</span>
                     </label>
                     <div className="relative">
-                      <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-purple-500 w-5 h-5 transition-colors duration-300" />
+                      <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors duration-300" />
                       <Input
                         id="phone"
                         name="phone"
@@ -226,7 +226,7 @@ export default function ContactSales() {
                       <span className="ml-1 text-purple-600 font-bold">*</span>
                     </label>
                     <div className="relative">
-                      <Building className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-purple-500 w-5 h-5 transition-colors duration-300" />
+                      <Building className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-brand w-5 h-5 transition-colors duration-300" />
                       <Input
                         id="company"
                         name="company"
@@ -267,7 +267,7 @@ export default function ContactSales() {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300 resize-none"
+                      className="w-full border-2 border-gray-200 rounded-xl focus:border-brand focus:ring-4 focus:ring-brand/20 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300 resize-none"
                       placeholder=""
                     />
                   </div>
@@ -293,7 +293,7 @@ export default function ContactSales() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-14 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full h-14 bg-brand hover:bg-brand-600 text-white font-semibold text-base rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? 'Submitting...' : 'Submit Request'}
                       {!isSubmitting && <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />}
@@ -314,36 +314,36 @@ export default function ContactSales() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-center mb-8">Other Ways to Reach Us</h2>
+              <h2 className="text-xl font-semibold text-center mb-8">Other Ways to Reach Us</h2>
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                  <Phone className="w-10 h-10 text-purple-600 mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2">Call Us</h3>
-                  <p className="text-sm text-gray-600 mb-3">Mon-Fri, 9am-6pm EST</p>
+                  <Phone className="w-10 h-10 text-brand mb-4 mx-auto" />
+                  <h3 className="font-semibold mb-2 text-sm">Call Us</h3>
+                  <p className="text-xs text-gray-600 mb-3 font-medium">Mon-Fri, 9am-6pm EST</p>
 
-                  <a href="tel:+44-1695-665111" className="text-purple-600 font-semibold hover:underline">
+                  <a href="tel:+44-1695-665111" className="text-brand font-semibold hover:underline text-sm">
                     +44 1695 665111
 
                   </a>
                 </div>
                 
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                  <Mail className="w-10 h-10 text-purple-600 mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2">Email Us</h3>
-                  <p className="text-sm text-gray-600 mb-3">Response within 24 hours</p>
+                  <Mail className="w-10 h-10 text-brand mb-4 mx-auto" />
+                  <h3 className="font-semibold mb-2 text-sm">Email Us</h3>
+                  <p className="text-xs text-gray-600 mb-3 font-medium">Response within 24 hours</p>
                   {/* TODO: Replace admin@heymello.ai with sales@heymello.ai when sales email is ready */}
-                  <a href="mailto:admin@heymello.ai" className="text-purple-600 font-semibold hover:underline">
+                  <a href="mailto:admin@heymello.ai" className="text-brand font-semibold hover:underline text-sm">
                     admin@heymello.ai
                   </a>
                 </div>
                 
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm">
                   <Phone className="w-10 h-10 text-purple-600 mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2">Talk to Our Agent</h3>
-                  <p className="text-sm text-gray-600 mb-3">Experience our AI voice agent directly</p>
+                  <h3 className="font-semibold mb-2 text-sm">Talk to Our Agent</h3>
+                  <p className="text-xs text-gray-600 mb-3 font-medium">Experience our AI voice agent directly</p>
 
-                  <a href="tel:+44-169-566-5111" className="text-purple-600 font-semibold hover:underline">
+                  <a href="tel:+44-169-566-5111" className="text-brand font-semibold hover:underline text-sm">
                     +44 1695 665111
 
                   </a>

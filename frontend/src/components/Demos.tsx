@@ -89,25 +89,25 @@ const Demos: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 tracking-tight leading-tight">
-            See Hey Mello in Action
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-3 text-gray-900 tracking-tight leading-tight">
+            See <span className="text-brand">Hey Mello</span> in Action
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Watch real-world demonstrations of our AI voice agents across different industries
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {demos.map((demo, index) => (
             <div
               key={index}
-              className="group relative bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-2xl hover:border-gray-300 transition-all duration-300 hover:-translate-y-2"
+              className="group relative bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-2xl hover:border-gray-300 transition-all duration-300 hover:-translate-y-2"
             >
               {/* Video placeholder with play button and wave animation */}
-              <div className="relative aspect-video bg-gray-100 rounded-xl mb-6 overflow-hidden">
+              <div className="relative aspect-video bg-gray-100 rounded-xl mb-4 overflow-hidden">
                 <div className="absolute inset-0 z-10 flex items-center justify-center">
                   <button
                     onClick={() => handlePlayPause(index)}

@@ -10,11 +10,11 @@ const Pricing = () => {
   const { pricing } = mockData;
 
   return (
-    <section id="pricing" className="py-20 bg-white">
+    <section id="pricing" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 tracking-tight leading-tight">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 text-gray-900 tracking-tight leading-tight">
             Simple, Transparent Pricing
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -23,7 +23,7 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {pricing.map((plan, index) => (
             <div 
               key={index}
@@ -42,13 +42,13 @@ const Pricing = () => {
               )}
               
               {/* Card Header */}
-              <div className="text-center pb-8 pt-8 px-6 border-b border-gray-100">
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <p className="text-sm text-gray-600">{plan.description}</p>
-                <div className="mt-6">
-                  <span className="text-5xl font-bold">{plan.price}</span>
+              <div className="text-center pb-6 pt-6 px-6 border-b border-gray-100">
+                <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
+                <p className="text-sm text-gray-600 font-medium">{plan.description}</p>
+                <div className="mt-4">
+                  <span className="text-4xl font-semibold">{plan.price}</span>
                   {plan.period !== 'contact sales' && (
-                    <span className="text-gray-500 ml-2">/{plan.period.replace('per ', '')}</span>
+                    <span className="text-gray-500 ml-2 text-sm">/{plan.period.replace('per ', '')}</span>
                   )}
                   {plan.period === 'contact sales' && (
                     <span className="text-gray-500 ml-2 block text-sm mt-2">{plan.period}</span>
@@ -58,11 +58,11 @@ const Pricing = () => {
               
               {/* Card Content */}
               <div className="p-6">
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
-                      <Check className="w-5 h-5 text-brand mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                      <Check className="w-4 h-4 text-brand mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm font-medium">{feature}</span>
                     </li>
                   ))}
                 </ul>

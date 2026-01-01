@@ -15,35 +15,35 @@ const HowItWorks = () => {
       icon: UserPlus,
       title: "Sign Up & Get Started",
       description: "Create your account and our team reaches out to understand your needs",
-      color: "from-purple-600 to-blue-600",
+                      color: "from-brand to-brand-600",
     },
     {
       number: "02",
       icon: Headphones,
       title: "HeyMello Team Assists Setup",
       description: "Our experts help configure your voice agents, integrate tools, and customize for your business",
-      color: "from-blue-600 to-purple-600",
+                      color: "from-brand-600 to-brand",
     },
     {
       number: "03",
       icon: LayoutDashboard,
       title: "Access Your Dashboard",
       description: "Get your personalized dashboard link to manage agents, view metrics, and track billing",
-      color: "from-purple-600 to-pink-600",
+                      color: "from-brand to-brand-600",
     },
     {
       number: "04",
       icon: Rocket,
       title: "Go Live with Agents",
       description: "Your AI voice agents are deployed and ready to handle calls 24/7",
-      color: "from-pink-600 to-purple-600",
+                      color: "from-brand-600 to-brand",
     },
     {
       number: "05",
       icon: Phone,
       title: "End-Users Call In",
       description: "Your customers interact with intelligent voice agents by simply calling your number",
-      color: "from-purple-600 to-blue-600",
+                      color: "from-brand to-brand-600",
     },
   ];
 
@@ -56,13 +56,13 @@ const HowItWorks = () => {
         <section className="py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <span className="text-sm font-semibold text-purple-600 uppercase tracking-wide mb-4 block">
+              <span className="text-sm font-semibold text-brand uppercase tracking-wide mb-3 block">
                 CLIENT ONBOARDING
               </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
                 How It Works
               </h1>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-medium">
                 From signup to going live, we're with you every step of the way. See how easy it is to get started with HeyMello AI.
               </p>
             </div>
@@ -75,7 +75,7 @@ const HowItWorks = () => {
             <div className="max-w-5xl mx-auto">
               <div className="relative">
                 {/* Connection Line */}
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-600 via-blue-600 to-purple-600 opacity-20"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand via-brand-600 to-brand opacity-20"></div>
                 
                 {/* Steps */}
                 <div className="space-y-12">
@@ -98,8 +98,8 @@ const HowItWorks = () => {
                             <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${step.color} shadow-lg flex items-center justify-center mb-4`}>
                               <step.icon className="h-7 w-7 text-white" />
                             </div>
-                            <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
-                            <p className="text-gray-600 text-lg">{step.description}</p>
+                            <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                            <p className="text-gray-600 text-sm font-medium">{step.description}</p>
                           </div>
                         </div>
                       </div>
@@ -120,37 +120,37 @@ const HowItWorks = () => {
         </section>
 
         {/* Dashboard Preview Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
                 Your Control Center
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-base md:text-lg text-gray-600 mb-6 font-medium">
                 Once onboarded, your dashboard gives you complete visibility and control
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mt-12">
                 <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all">
-                  <LayoutDashboard className="h-10 w-10 text-purple-600 mb-4 mx-auto" />
-                  <h3 className="font-semibold mb-2">Agent Management</h3>
-                  <p className="text-sm text-gray-600">View and manage all your AI voice agents in one place</p>
+                  <LayoutDashboard className="h-10 w-10 text-brand mb-4 mx-auto" />
+                  <h3 className="font-semibold mb-2 text-sm">Agent Management</h3>
+                  <p className="text-xs text-gray-600 font-medium">View and manage all your AI voice agents in one place</p>
                 </div>
                 
                 <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all">
                   <svg className="h-10 w-10 text-purple-600 mb-4 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
-                  <h3 className="font-semibold mb-2">Real-Time Metrics</h3>
-                  <p className="text-sm text-gray-600">Track performance, call volume, and customer satisfaction</p>
+                  <h3 className="font-semibold mb-2 text-sm">Real-Time Metrics</h3>
+                  <p className="text-xs text-gray-600 font-medium">Track performance, call volume, and customer satisfaction</p>
                 </div>
                 
                 <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all">
                   <svg className="h-10 w-10 text-purple-600 mb-4 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
-                  <h3 className="font-semibold mb-2">Billing Overview</h3>
-                  <p className="text-sm text-gray-600">Transparent usage tracking and billing information</p>
+                  <h3 className="font-semibold mb-2 text-sm">Billing Overview</h3>
+                  <p className="text-xs text-gray-600 font-medium">Transparent usage tracking and billing information</p>
                 </div>
               </div>
             </div>
@@ -158,25 +158,25 @@ const HowItWorks = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-base md:text-lg text-gray-600 mb-6 font-medium">
                 Join hundreds of businesses already using HeyMello AI to transform their customer interactions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact-sales">
-                  <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all">
+                  <button                     className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold bg-brand hover:bg-brand-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all">
                     Contact Sales
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </button>
                 </Link>
                 <button 
                   onClick={() => setShowCalendar(true)}
-                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-purple-600 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition-all"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold border-2 border-brand text-brand rounded-lg hover:bg-brand hover:text-white transition-all"
                 >
                   Request a Demo
                 </button>
