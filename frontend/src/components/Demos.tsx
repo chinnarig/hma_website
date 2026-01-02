@@ -106,20 +106,23 @@ const Demos: React.FC = () => {
             <div
               key={index}
               onClick={() => handlePlayPause(index)}
-              className="group relative bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-2xl hover:border-gray-300 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+              className="group relative bg-white border border-brand/20 rounded-2xl p-5 hover:shadow-2xl hover:shadow-brand/20 hover:border-brand/40 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
             >
+              {/* Purple glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
               {/* Video placeholder with play button and wave animation */}
-              <div className="relative aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl mb-4 overflow-hidden">
+              <div className="relative aspect-video bg-gradient-to-br from-brand/5 to-purple-100 rounded-xl mb-4 overflow-hidden">
                 <Image
                   src="/demo_image.jpeg"
                   alt={`${demo.title} AI Voice Agent Demo`}
                   fill
                   className="object-cover scale-125"
                 />
-                {/* Subtle gradient overlay for better button visibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent z-5"></div>
+                {/* Purple gradient overlay for better button visibility */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand/20 to-transparent z-5"></div>
                 <div className="absolute inset-0 z-10 flex items-end justify-end p-3">
-                  <div className="relative z-10 rounded-full w-12 h-12 bg-brand/95 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-all shadow-lg">
+                  <div className="relative z-10 rounded-full w-12 h-12 bg-brand backdrop-blur-sm flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-brand/50 transition-all shadow-lg">
                     {playingIndex === index ? (
                       <div className="flex items-end gap-0.5 h-4">
                         <span className="w-1 rounded-sm bg-white animate-wave-1" style={{animation: 'wave 1s ease-in-out infinite'}}></span>
@@ -134,11 +137,11 @@ const Demos: React.FC = () => {
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+              <div className="relative space-y-3">
+                <div className="text-sm font-semibold text-brand uppercase tracking-wide">
                   {demo.category}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{demo.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-brand transition-colors">{demo.title}</h3>
                 <p className="text-base text-gray-600 leading-relaxed">
                   {demo.description}
                 </p>

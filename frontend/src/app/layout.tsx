@@ -8,8 +8,26 @@ export const metadata: Metadata = {
     default: 'Hey Mello - AI Voice Agents for Automated Phone Calls',
     template: '%s | Hey Mello'
   },
-  description: 'Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support. Intelligent voice agents that deliver natural conversations and exceptional customer experiences.',
-  keywords: ['AI voice agents', 'automated phone calls', 'customer support AI', 'voice automation', 'enterprise AI', 'call center automation', 'AI phone system'],
+  description: 'Enterprise-ready AI voice agents. Intelligent voice agents that deliver natural conversations and exceptional customer experiences. UK-based AI voice technology.AI Voice Agents That Understand Your Customers.',
+  keywords: [
+    'AI voice agents',
+    'automated phone calls',
+    'customer support AI',
+    'voice automation',
+    'enterprise AI',
+    'call center automation',
+    'AI phone system',
+    'AI voice agents UK',
+    'automated phone calls United Kingdom',
+    'UK customer support AI',
+    'British AI voice technology',
+    'voice AI UK',
+    'call centre automation UK',
+    'AI phone assistant UK',
+    'UK voice automation',
+    'AI receptionist UK',
+    'automated customer service UK'
+  ],
   authors: [{ name: 'Hey Mello' }],
   creator: 'Hey Mello',
   publisher: 'Mello AI Ltd',
@@ -20,11 +38,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_GB',
     url: 'https://heymello.ai',
     title: 'Hey Mello - AI Voice Agents for Automated Phone Calls',
     description: 'Intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7.',
     siteName: 'Hey Mello',
+    countryName: 'United Kingdom',
     images: [
       {
         url: '/heroimage_1.jpeg',
@@ -53,7 +72,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'MfUQY4IKHGZLs5iALhyqZebKCKuZsgG1Kw5vqmVABFE',
+    google: 'k52w_ql9bCPjmoHkOSt5BRMnYj6Qlx1aRoskPrrro-Y',
   },
 }
 
@@ -77,10 +96,14 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logos/logo_tab.svg" type="image/svg+xml" />
         <link rel="canonical" href="https://heymello.ai" />
+        <link rel="alternate" href="https://heymello.co.uk" hrefLang="en-GB" />
+        <link rel="alternate" href="https://heymelloai.com" hrefLang="en" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="geo.region" content="GB" />
+        <meta name="geo.placename" content="United Kingdom" />
       </head>
       <body className={`min-h-screen antialiased font-sans ${plusJakartaSans.variable}`} suppressHydrationWarning>{children}</body>
     </html>

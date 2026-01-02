@@ -29,17 +29,37 @@ export default function Home() {
     "@type": "SoftwareApplication",
     "name": "Hey Mello",
     "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "USD"
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://heymello.ai/pricing"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "ratingCount": "1000"
     },
-    "description": "Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support"
+    "description": "Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support",
+    "provider": {
+      "@type": "Organization",
+      "name": "Mello AI Ltd",
+      "url": "https://heymello.ai",
+      "logo": "https://heymello.ai/logos/website_logo_new.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44-1695-665111",
+        "contactType": "customer service",
+        "areaServed": ["GB", "UK"],
+        "availableLanguage": "en"
+      }
+    }
   }
 
   return (
