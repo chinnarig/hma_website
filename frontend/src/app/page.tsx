@@ -23,11 +23,12 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  // Structured Data for SEO
+  // Structured Data for SEO - SoftwareApplication
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Hey Mello",
+    "alternateName": ["heymello", "hey mello AI", "Mello AI"],
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "offers": {
@@ -42,31 +43,53 @@ export default function Home() {
       "ratingValue": "4.9",
       "ratingCount": "1000"
     },
-    "description": "Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support",
+    "description": "Enterprise-ready AI voice agents for automated phone calls and 24/7 customer support. Intelligent voice agents that deliver natural conversations and exceptional customer experiences.",
     "provider": {
-      "@type": "Organization",
-      "name": "Mello AI Ltd",
-      "url": "https://heymello.ai",
-      "logo": "https://heymello.ai/logos/website_logo_new.svg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "GB"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+44-1695-665111",
-        "contactType": "customer service",
-        "areaServed": ["GB", "UK"],
-        "availableLanguage": "en"
+      "@id": "https://heymello.ai/#organization"
+    }
+  };
+
+  // Service Schema for SEO
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI Voice Agents",
+    "name": "AI Voice Agents for Customer Support",
+    "description": "Intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7. AI-powered voice agents for automated phone calls, customer support, appointment scheduling, and call center automation.",
+    "provider": {
+      "@id": "https://heymello.ai/#organization"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": ["GB", "UK", "US", "Worldwide"]
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://heymello.ai",
+      "servicePhone": "+44-1695-665111"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0.08",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "0.08",
+        "priceCurrency": "USD",
+        "unitText": "per minute"
       }
     }
-  }
+  };
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <div className="min-h-screen relative">
         {/* Nebula Gradient Effect - Subtle purple radial gradient in corner */}

@@ -4,10 +4,30 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQs from '@/components/FAQs';
 import { Phone, Mail } from 'lucide-react';
+import { mockData } from '@/data/mockData';
 
 export default function HelpCenter() {
+  // FAQPage Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": mockData.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <div className="min-h-screen">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="min-h-screen">
       <Navbar />
       <main className="pt-24 pb-16">
         {/* Hero Section with Search */}
@@ -69,6 +89,7 @@ export default function HelpCenter() {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }

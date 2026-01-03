@@ -91,10 +91,103 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // Organization Schema for SEO
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://heymello.ai/#organization",
+    "name": "Mello AI Ltd",
+    "alternateName": [
+      "heymello",
+      "hey mello AI",
+      "hey mello",
+      "heymello.ai",
+      "mello ai",
+      "mello ai uk",
+      "heymelloai.com"
+    ],
+    "description": "Mello AI Ltd (trading as heymello) is an AI company specializing in intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7.",
+    "url": "https://heymello.ai",
+    "logo": [
+      {
+        "@type": "ImageObject",
+        "url": "https://heymello.ai/logos/website_logo_new.svg",
+        "width": 77,
+        "height": 78,
+        "encodingFormat": "image/svg+xml"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://heymello.ai/logos/website_logo_new.png",
+        "width": 77,
+        "height": 78,
+        "encodingFormat": "image/png"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/heymello-ai",
+      "https://heymelloai.com",
+      "https://heymello.co.uk"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "admin@heymello.ai"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    },
+    "foundingLocation": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    }
+  };
+
+  // WebSite Schema for SEO
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Hey Mello",
+    "alternateName": "Mello AI Ltd",
+    "url": "https://heymello.ai",
+    "description": "AI Voice Agents That Understand Your Customers - Intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mello AI Ltd",
+      "logo": [
+        {
+          "@type": "ImageObject",
+          "url": "https://heymello.ai/logos/website_logo_new.svg",
+          "width": 77,
+          "height": 78,
+          "encodingFormat": "image/svg+xml"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://heymello.ai/logos/website_logo_new.png",
+          "width": 77,
+          "height": 78,
+          "encodingFormat": "image/png"
+        }
+      ]
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://heymello.ai/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning className={plusJakartaSans.variable}>
       <head>
         <link rel="icon" href="/logos/logo_tab.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
         <link rel="canonical" href="https://heymello.ai" />
         <link rel="alternate" href="https://heymello.co.uk" hrefLang="en-GB" />
         <link rel="alternate" href="https://heymelloai.com" hrefLang="en" />
@@ -104,6 +197,14 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="geo.region" content="GB" />
         <meta name="geo.placename" content="United Kingdom" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </head>
       <body className={`min-h-screen antialiased font-sans ${plusJakartaSans.variable}`} suppressHydrationWarning>{children}</body>
     </html>

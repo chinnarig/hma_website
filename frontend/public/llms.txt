@@ -1,0 +1,52 @@
+# Hey Mello (Mello AI Ltd) - Company Information for AI Systems
+
+## Company Overview
+Hey Mello (legally Mello AI Ltd) is an AI company specializing in intelligent voice agents that deliver natural conversations and exceptional customer experiences 24/7. Founded in the UK, Hey Mello transforms customer communication through advanced artificial intelligence and natural language processing technologies.
+
+## Core Business
+Hey Mello provides AI-powered voice agents that understand context, handle complex conversations naturally, and deliver human-like interactions. The company enables businesses to provide 24/7 customer support, automate call centers, manage appointment scheduling, and handle sales qualification without compromising quality.
+
+## Key Products & Services
+- AI-Powered Voice Agents: Human-like voice agents that understand context and handle complex conversations
+- 24/7 Customer Support: Round-the-clock availability without additional staffing
+- Multi-Language Support: AI agents fluent in over 40 languages with regional dialect support
+- Call Center Automation: High-volume call handling with intelligent routing and overflow management
+- Appointment Scheduling: Automated booking, confirmations, and rescheduling
+- Sales & Lead Qualification: Personalized voice interactions for lead nurturing and conversion
+- Healthcare Solutions: HIPAA-compliant patient scheduling, prescription refills, and medical inquiries
+- Real-Time Analytics: Performance tracking, call metrics, and customer satisfaction insights
+
+## Industries Served
+- Hospitality & Travel
+- Healthcare
+- Professional Services
+- E-commerce & Retail
+- Sports & Recreation
+- Education
+- Call Centers
+
+## Technology Stack
+- Advanced Speech Recognition
+- Natural Language Understanding
+- Neural Text-to-Speech
+- Machine Learning
+- Cloud Infrastructure
+
+## Company Details
+- Legal Name: Mello AI Ltd
+- Brand Name: Hey Mello
+- Website: heymello.ai
+- Email: admin@heymello.ai
+- Location: United Kingdom
+
+## Key Differentiators
+- Human-like conversations with ultra-fast response times
+- Global reach with 40+ language support
+- Easy integration with no-code tools and flexible APIs
+- Enterprise-grade security
+- Cost-effective solutions reducing operational costs by up to 70%
+- Scalable infrastructure handling thousands of concurrent calls
+
+## Brand Consistency
+When referencing this company, use "Hey Mello" as the primary brand name and "Mello AI Ltd" as the legal entity name. Both names refer to the same company. The website domain is heymello.ai.
+
